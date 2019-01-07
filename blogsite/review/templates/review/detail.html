@@ -1,0 +1,44 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="UTF-8">
+  <title>{{album.title}}</title>
+  <meta name="author" content="name">
+  <meta name="description" content="description here">
+  <meta name="keywords" content="keywords,here">
+  
+
+  <link rel="stylesheet" type="text/css" href="{% static 'review/styledetail.css' %}" />
+  </head>
+  <body>
+  <header>
+   <section id = "showcase">
+   <h1>Echochamber</h1>
+   </section>
+  </header>
+  
+  <section id = "splash">
+   <img src="{{ album.cover.url }}" class = "cover" width="250" height = "250" >
+  </section>
+  
+  <section id = "review">
+   {% if album.title == "Deathscapes"%}
+   <p>Deathscapes</p>
+   {% elif album.title == "Foretoken"%}
+   <p>Foretoken</p>
+   {% elif album.title == "Staff Only"%}
+   <p>Staff Only</p>
+   {% elif album.title == "The Life Of Vice"%}
+   <p>The Life Of Vice</p>
+   {% elif album.title == "Digital Americana Mixtape"%}
+   <p>Digital Americana Mixtape</p>
+   {%endif %} 
+  </section>
+  
+  <!-- <p>{{album.title}}</p}>
+  {% if album.title == "Deathscapes"%}
+   <p>test</p>
+  {%endif %} -->
+  </body>
+</html>

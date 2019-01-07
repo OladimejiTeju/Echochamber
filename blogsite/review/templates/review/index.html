@@ -1,0 +1,43 @@
+{% load static %}
+{% load custom_tags %}
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset = "utf-8">
+  <meta name = "viewport" content = "width=device-width" >
+  <meta name = "description" content = "web design or something">
+  <meta name = "keywords" content = "web, design" >
+  <meta name = "author" content = "Filograte">  
+  <link rel="stylesheet" type="text/css" href="{% static 'review/styleindex.css' %}" />
+  <script src="{% static 'review/script.js' %}"></script> 
+ </head>
+ <body>
+  <header>
+   <section id = "showcase">
+   <h1>Echochamber</h1>
+   </section>
+  </header>
+	<!-- <img src="{% static "review/Deathscapes.jpg" %}" alt="Hi! width = "100" height = "100"/> -->
+  
+   {% for Album in AlbumList %}
+   <section id = "list">
+    <p>{{Album.title}} by {{Album.author}}</p>
+	<a href = '{{Album.title}}'>
+	 <img src="{{ Album.cover.url }}" class = "cover" width="100" height = "100" >
+	</a>
+	<ul>
+	 <li>Songs: {{Album.songamount}}</li>
+	 <li>Rating: {{Album.rating}}</li>
+	 <li>Date Published: {{Album.pubdate}} </li>
+    </ul>
+   </section> 
+   {% endfor %}
+
+   <section id = buttons>
+    <form action ='' method="get">
+	{{form}}
+	<input type="submit" value="select">
+	</form>	
+   </section>
+ </body>
+</html>

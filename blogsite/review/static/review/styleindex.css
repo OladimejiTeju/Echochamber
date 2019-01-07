@@ -1,0 +1,54 @@
+body {
+	background-image: url("c10.jpg");
+}
+
+#showcase h1{
+	border-bottom: black 5px solid;
+	border-top : black 5px solid;
+	margin-top: 10px;
+	font-size: 55px;
+	margin-bottom: 10px;
+	text-align: center;
+	color: orange;
+	
+}
+
+
+#list{
+	
+   
+    color: #3a537a;
+    width: 50%; /* Change this to whatever width you want. */
+    padding-top: 20px; /* This creates some space between the element and the border. */
+    border-bottom: 2px solid black; /* This creates the border.*/
+	
+}
+#list ul{
+   list-style: none;	
+   display: inline-block;
+   
+   
+ 
+}
+#list li{
+    
+    width:150px;
+    height:30px;
+    padding:4px;
+   
+  
+}
+
+#list p{
+	padding-left: 10px;
+}
+
+#list .cover {
+   float: left;
+   padding-left: 10px;
+}
+
+#button{
+	color: #3a537a;
+}
+	

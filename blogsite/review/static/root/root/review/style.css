@@ -1,0 +1,18 @@
+#showcase h1{
+	border-bottom: #e8491d 5px solid;
+	border-top : #e8491d 5px solid;
+	margin-top: 10px;
+	font-size: 50px
+	margin-bottom: 10px;
+	text-align: center;
+}
+
+#list ul{
+  list-style: none;
+  
+}
+#list li{
+   float: left;
+  
+}
+	
